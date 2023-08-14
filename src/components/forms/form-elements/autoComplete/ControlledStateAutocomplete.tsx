@@ -5,13 +5,14 @@ import CustomTextField from "../../theme-elements/CustomTextField";
 
 const options = ['Option 1', 'Option 2'];
 
-const ControlledStateAutocomplete = () => {
+const ControlledStateAutocomplete = ({size}) => {
   const [value, setValue] = React.useState<string | null>(options[0]);
   const [inputValue, setInputValue] = React.useState('');
 
   return (
     <>
       <Autocomplete
+      size={size??''}
         value={value}
         onChange={(event: any, newValue: string | null) => {
           setValue(newValue);
@@ -31,17 +32,7 @@ const ControlledStateAutocomplete = () => {
           />
         )}
       />
-      <Typography
-        color="textSecondary"
-        variant="subtitle2"
-        sx={{
-          mt: 1,
-        }}
-      >{`value: ${value !== null ? `'${value}'` : 'null'}`}</Typography>
-      <Typography
-        color="textSecondary"
-        variant="subtitle2"
-      >{`inputvalue: '${inputValue}'`}</Typography>
+    
     </>
   );
 };

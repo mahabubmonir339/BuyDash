@@ -16,7 +16,7 @@ import WeeklyStats from "../../src/components/dashboard/modern/WeeklyStats";
 import TopPerformers from "../../src/components/dashboard/modern/TopPerformers";
 import Welcome from "../../src/layouts/full/shared/welcome/Welcome";
 
-export default function Modern() {
+export default function Dashboard() {
 
 
   const [isLoading, setLoading] = useState(true);

@@ -73,7 +73,7 @@ const Menuitems: MenuitemsType[] = [
     id: uniqueId(),
     title: 'Dashboard',
     icon: IconAperture,
-    href: '/dashboard',
+    href: '/',
   },
   {
     navlabel: true,
