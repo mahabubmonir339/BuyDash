@@ -34,7 +34,7 @@ const Logo = () => {
             priority
           />
         )}
-        <p style={{fontWeight:'900',fontSize:'1.2rem',justifySelf:'bottom'}}>99Innovations</p>
+        <p style={{fontWeight:'900',fontSize:'1.2rem',justifySelf:'bottom',color:'orange'}}>99Innovations</p>
       </LinkStyled>
     );
   }
