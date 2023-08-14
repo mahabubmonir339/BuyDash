@@ -76,7 +76,7 @@ const MonthlyEarnings = ({ isLoading }: MonthlyearningsCardProps) => {
           >
             <>
               <Typography variant="h3" fontWeight="700" mt="-20px">
-                $6,820
+                $6,821
               </Typography>
               <Stack direction="row" spacing={1} my={1} alignItems="center">
                 <Avatar sx={{ bgcolor: errorlight, width: 27, height: 27 }}>

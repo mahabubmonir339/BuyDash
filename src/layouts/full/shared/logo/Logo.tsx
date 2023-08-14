@@ -19,7 +19,7 @@ const Logo = () => {
       <LinkStyled href="/">
         {customizer.activeMode === "dark" ? (
           <Image
-            src="/images/logos/light-logo.svg"
+            src="/images/logos/Asset-11.svg"
             alt="logo"
             height={customizer.TopbarHeight}
             width={174}
@@ -27,7 +27,7 @@ const Logo = () => {
           />
         ) : (
           <Image
-            src={"/images/logos/dark-logo.svg"}
+            src={"/images/logos/Asset-11.svg"}
             alt="logo"
             height={customizer.TopbarHeight}
             width={174}
@@ -42,7 +42,7 @@ const Logo = () => {
     <LinkStyled href="/">
       {customizer.activeMode === "dark" ? (
         <Image
-          src="/images/logos/dark-rtl-logo.svg"
+          src="/images/logos/Asset-11.svg"
           alt="logo"
           height={customizer.TopbarHeight}
           width={174}
@@ -50,7 +50,7 @@ const Logo = () => {
         />
       ) : (
         <Image
-          src="/images/logos/light-logo-rtl.svg"
+          src="/images/logos/Asset-11.svg"
           alt="logo"
           height={customizer.TopbarHeight}
           width={174}

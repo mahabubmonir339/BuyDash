@@ -58,7 +58,7 @@ const MyApp = (props: MyAppProps) => {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <title>Modernize NextJs Admin template</title>
+        <title>Sohub Admin Panel</title>
       </Head>
       <NextNProgress color="#5D87FF" />
       <ThemeProvider theme={theme}>

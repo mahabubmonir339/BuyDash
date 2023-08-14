@@ -73,7 +73,7 @@ const Menuitems: MenuitemsType[] = [
 
   {
     id: uniqueId(),
-    title: 'Modern',
+    title: 'Dashboard',
     icon: IconAperture,
     href: '/',
     chip: 'New',
