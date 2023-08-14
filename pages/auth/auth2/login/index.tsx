@@ -44,7 +44,7 @@ const Login2 = () => {
                 subtitle={
                   <Stack direction="row" spacing={1} justifyContent="center" mt={3}>
                     <Typography color="textSecondary" variant="h6" fontWeight="500">
-                      New to Sohub Call Center?
+                      New to Modernize?
                     </Typography>
                     <Typography
                       component={Link}

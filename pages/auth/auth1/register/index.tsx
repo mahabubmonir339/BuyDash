@@ -71,7 +71,7 @@ const Register = () => (
       >
         <Box p={4}>
           <AuthRegister
-            title="Welcome to Sohub Call Center"
+            title="Welcome to Modernize"
             subtext={
               <Typography variant="subtitle1" color="textSecondary" mb={1}>
                 Your Admin Dashboard

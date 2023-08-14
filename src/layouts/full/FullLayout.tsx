@@ -37,7 +37,8 @@ const FullLayout: React.FC<Props> = ({ children }) => {
       {/* ------------------------------------------- */}
       {/* Sidebar */}
       {/* ------------------------------------------- */}
-      {customizer.isHorizontal ? "" : <Sidebar />}
+      {/* {customizer.isHorizontal ? "" : <Sidebar />} */}
+      <Sidebar/>
       {/* ------------------------------------------- */}
       {/* Main Wrapper */}
       {/* ------------------------------------------- */}
@@ -54,7 +55,8 @@ const FullLayout: React.FC<Props> = ({ children }) => {
         {/* ------------------------------------------- */}
         {/* Header */}
         {/* ------------------------------------------- */}
-        {customizer.isHorizontal ? <HorizontalHeader /> : <Header />}
+        {/* {customizer.isHorizontal ? <HorizontalHeader /> : <Header />} */}
+        <Header/>
         {/* PageContent */}
         {customizer.isHorizontal ? <Navigation /> : ""}
         <Container
@@ -76,7 +78,7 @@ const FullLayout: React.FC<Props> = ({ children }) => {
           {/* End Page */}
           {/* ------------------------------------------- */}
         </Container>
-        <Customizer />
+        {/* <Customizer /> */}
       </PageWrapper>
     </MainWrapper>
   );

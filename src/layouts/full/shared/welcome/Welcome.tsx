@@ -18,7 +18,7 @@ const Welcome = () => {
     // Update the document title using the browser API
     const timer = setTimeout(() => {
       handleClick();
-    }, 1500);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -37,7 +37,8 @@ const Welcome = () => {
           variant="filled"
           sx={{ width: "100%", color: "white" }}
         >
-          <AlertTitle>Welcome To Sohub Call Center</AlertTitle>
+          <AlertTitle>Welcome To 99Innovation</AlertTitle>
+          Easy to Manage Now!!!
         </Alert>
       </Snackbar>
     </React.Fragment>

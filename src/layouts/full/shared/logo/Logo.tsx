@@ -16,10 +16,10 @@ const Logo = () => {
 
   if (customizer.activeDir === "ltr") {
     return (
-      <LinkStyled href="/">
+      <LinkStyled style={{justifyContent:'bottom',display:'flex',width:'100%'}} href="/">
         {customizer.activeMode === "dark" ? (
           <Image
-            src="/images/logos/Asset-11.svg"
+            src="/images/logos/light-logo.svg"
             alt="logo"
             height={customizer.TopbarHeight}
             width={174}
@@ -27,13 +27,14 @@ const Logo = () => {
           />
         ) : (
           <Image
-            src={"/images/logos/Asset-11.svg"}
+            src={"/images/logos/dark-logo.svg"}
             alt="logo"
             height={customizer.TopbarHeight}
-            width={174}
+            width={80}
             priority
           />
         )}
+        <p style={{fontWeight:'900',fontSize:'1.2rem',justifySelf:'bottom'}}>99Innovations</p>
       </LinkStyled>
     );
   }
@@ -42,7 +43,7 @@ const Logo = () => {
     <LinkStyled href="/">
       {customizer.activeMode === "dark" ? (
         <Image
-          src="/images/logos/Asset-11.svg"
+          src="/images/logos/dark-rtl-logo.svg"
           alt="logo"
           height={customizer.TopbarHeight}
           width={174}
@@ -50,13 +51,14 @@ const Logo = () => {
         />
       ) : (
         <Image
-          src="/images/logos/Asset-11.svg"
+          src="/images/logos/light-logo-rtl.svg"
           alt="logo"
           height={customizer.TopbarHeight}
           width={174}
           priority
         />
       )}
+      
     </LinkStyled>
   );
 };

@@ -51,11 +51,13 @@ const Header = () => {
         {/* Search Dropdown */}
         {/* ------------------------------------------- */}
         <Search />
-        {lgUp ? (
+
+        {/* this is top navigation for desktop */}
+        {/* {lgUp ? (
           <>
             <Navigation />
           </>
-        ) : null}
+        ) : null} */}
 
         <Box flexGrow={1} />
         <Stack spacing={1} direction="row" alignItems="center">
@@ -63,7 +65,7 @@ const Header = () => {
           {/* ------------------------------------------- */}
           {/* Ecommerce Dropdown */}
           {/* ------------------------------------------- */}
-          <Cart />
+          {/* <Cart /> */}
           {/* ------------------------------------------- */}
           {/* End Ecommerce Dropdown */}
           {/* ------------------------------------------- */}
@@ -71,7 +73,7 @@ const Header = () => {
           {/* ------------------------------------------- */}
           {/* Toggle Right Sidebar for mobile */}
           {/* ------------------------------------------- */}
-          {lgDown ? <MobileRightSidebar /> : null}
+          {/* {lgDown ? <MobileRightSidebar /> : null} */}
           <Profile />
         </Stack>
       </ToolbarStyled>

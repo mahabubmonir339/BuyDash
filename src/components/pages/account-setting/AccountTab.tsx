@@ -247,7 +247,7 @@ const AccountTab = () => {
                   </CustomFormLabel>
                   <CustomTextField
                     id="text-email"
-                    value="hello@sohub.com.bd"
+                    value="info@modernize.com"
                     variant="outlined"
                     fullWidth
                   />

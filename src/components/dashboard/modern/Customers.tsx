@@ -1,17 +1,16 @@
 import dynamic from "next/dynamic";
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 import { useTheme } from '@mui/material/styles';
-import { Stack, Typography, Avatar, Fab } from '@mui/material';
-import { IconArrowDownRight, IconCurrencyDollar } from '@tabler/icons-react';
-
+import { Stack, Typography, Avatar, Box } from '@mui/material';
+import { IconArrowDownRight } from '@tabler/icons-react';
 import DashboardCard from '../../shared/DashboardCard';
-import SkeletonMonthlyEarningsTwoCard from "../skeleton/MonthlyEarningsTwoCard";
+import SkeletonCustomersCard from "../skeleton/CustomersCard";
 
-interface MonthlyearningsCardProps {
+interface CustomersCardProps {
   isLoading: boolean;
 }
 
-const MonthlyEarnings = ({ isLoading }: MonthlyearningsCardProps) => {
+const Customers = ({ isLoading }: CustomersCardProps) => {
   // chart color
   const theme = useTheme();
   const secondary = theme.palette.secondary.main;
@@ -27,7 +26,7 @@ const MonthlyEarnings = ({ isLoading }: MonthlyearningsCardProps) => {
       toolbar: {
         show: false,
       },
-      height: 60,
+      height: 80,
       sparkline: {
         enabled: true,
       },
@@ -47,13 +46,16 @@ const MonthlyEarnings = ({ isLoading }: MonthlyearningsCardProps) => {
     },
     tooltip: {
       theme: theme.palette.mode === 'dark' ? 'dark' : 'light',
+      x: {
+        show: false,
+      },
     },
   };
   const seriescolumnchart = [
     {
       name: '',
       color: secondary,
-      data: [25, 66, 20, 40, 12, 58, 20],
+      data: [30, 25, 35, 20, 30, 40],
     },
   ];
 
@@ -61,39 +63,42 @@ const MonthlyEarnings = ({ isLoading }: MonthlyearningsCardProps) => {
     <>
       {
         isLoading ? (
-          <SkeletonMonthlyEarningsTwoCard />
+          <SkeletonCustomersCard />
         ) : (
           <DashboardCard
-            title="Monthly Earnings"
-            action={
-              <Fab color="secondary" size="medium">
-                <IconCurrencyDollar width={24} />
-              </Fab>
-            }
             footer={
-              <Chart options={optionscolumnchart} series={seriescolumnchart} type="area" height={60} width={"100%"} />
+              <>
+                <Box height="80px">
+                  <Chart
+                    options={optionscolumnchart}
+                    series={seriescolumnchart}
+                    type="area"
+                    height={80}
+                    width={"100%"}
+                  />
+                </Box>
+              </>
             }
           >
             <>
-              <Typography variant="h3" fontWeight="700" mt="-20px">
-                $6,820
+              <Typography variant="subtitle2" color="textSecondary">
+                Customers
               </Typography>
-              <Stack direction="row" spacing={1} my={1} alignItems="center">
-                <Avatar sx={{ bgcolor: errorlight, width: 27, height: 27 }}>
-                  <IconArrowDownRight width={20} color="#FA896B" />
+              <Typography variant="h4">36,358</Typography>
+              <Stack direction="row" spacing={1} mt={1} alignItems="center">
+                <Avatar sx={{ bgcolor: errorlight, width: 24, height: 24 }}>
+                  <IconArrowDownRight width={18} color="#FA896B" />
                 </Avatar>
                 <Typography variant="subtitle2" fontWeight="600">
                   +9%
-                </Typography>
-                <Typography variant="subtitle2" color="textSecondary">
-                  last year
                 </Typography>
               </Stack>
             </>
           </DashboardCard>
         )}
     </>
+
   );
 };
 
-export default MonthlyEarnings;
+export default Customers;
