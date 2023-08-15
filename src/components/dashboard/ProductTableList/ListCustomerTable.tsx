@@ -325,7 +325,7 @@ const CustomerListTable = () => {
     // ... Repeat the pattern to reach a total of 20 records
   ];
 
-  const [rows, setRows] = React.useState<any>(sampleCustomers);
+  const [rows, setRows] = React.useState<CustomerType[]>(sampleCustomers);
   const [search, setSearch] = React.useState('');
 
 
@@ -424,9 +424,7 @@ const CustomerListTable = () => {
                 rowCount={rows.length}
               />
               <TableBody>
-                {stableSort(rows, getComparator(order, orderBy))
-                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                  .map((row: CustomerType, index) => {
+                {rows.map((row: CustomerType, index) => {
                     const isItemSelected = isSelected(row.id);
                     const labelId = `enhanced-table-checkbox-${index}`;
 

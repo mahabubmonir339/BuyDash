@@ -5,14 +5,19 @@ import CustomTextField from "../../theme-elements/CustomTextField";
 
 const options = ['Option 1', 'Option 2'];
 
-const ControlledStateAutocomplete = ({size}) => {
+
+interface ControlledStatePropsType {
+  small:boolean
+}
+
+const ControlledStateAutocomplete:React.FC<ControlledStatePropsType> = ({small}) => {
   const [value, setValue] = React.useState<string | null>(options[0]);
   const [inputValue, setInputValue] = React.useState('');
 
   return (
     <>
       <Autocomplete
-      size={size??''}
+      size={small===true?'small':'medium'}
         value={value}
         onChange={(event: any, newValue: string | null) => {
           setValue(newValue);

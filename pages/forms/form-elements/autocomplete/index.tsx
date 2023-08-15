@@ -45,7 +45,7 @@ export default function MuiAutoComplete() {
           </Grid>
           <Grid item xs={12} lg={4} sm={6} display="flex" alignItems="stretch">
             <ChildCard title="Controlled State">
-              <ControlledStateAutocomplete />
+              <ControlledStateAutocomplete small={false}/>
             </ChildCard>
           </Grid>
           <Grid item xs={12} lg={4} sm={6} display="flex" alignItems="stretch">

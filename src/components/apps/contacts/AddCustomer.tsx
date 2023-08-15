@@ -16,8 +16,15 @@ import user1 from 'public/images/profile/user-1.jpg';
 import ControlledStateAutocomplete from '../../forms/form-elements/autoComplete/ControlledStateAutocomplete';
 import { Delete } from '@mui/icons-material';
 
-
-const CustomerAdd = ({ modal, setModal, btnLbl, dialogTitle, btnVisiblity }) => {
+interface CustomerAddProps {
+  modal: boolean; // Replace 'any' with the actual type of 'modal'
+  setModal: (value: boolean) => void; // Replace 'any' with the actual type of 'setModal'
+  btnLbl: string;
+  dialogTitle: string;
+  btnVisiblity: boolean;
+}
+ 
+const CustomerAdd:React.FC<CustomerAddProps> = ({ modal, setModal, btnLbl, dialogTitle, btnVisiblity }) => {
 
 
 
@@ -136,7 +143,7 @@ const CustomerAdd = ({ modal, setModal, btnLbl, dialogTitle, btnVisiblity }) => 
                 </Grid>
                 <Grid item xs={12} lg={4}>
                   <FormLabel>Whether Collect the money</FormLabel>
-                  <ControlledStateAutocomplete size={'small'} />
+                  <ControlledStateAutocomplete small={true} />
 
                 </Grid>
                 <Grid item xs={12} lg={4}>
@@ -165,7 +172,7 @@ const CustomerAdd = ({ modal, setModal, btnLbl, dialogTitle, btnVisiblity }) => 
                 </Grid>
                 <Grid item xs={12} lg={4}>
                   <FormLabel>Merchant Type</FormLabel>
-                  <ControlledStateAutocomplete size={'small'} />
+                  <ControlledStateAutocomplete small={true} />
 
                 </Grid>
                 <Grid item xs={12} lg={4}>
