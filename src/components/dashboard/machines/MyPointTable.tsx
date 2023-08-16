@@ -236,7 +236,7 @@ const EnhancedTableToolbar = (props: EnhancedTableToolbarProps) => {
                 </InputAdornment>
               ),
             }}
-            placeholder="Search Customer"
+            placeholder="Search Point"
 
             onChange={handleSearch}
             value={search}
