@@ -2,7 +2,7 @@ import Breadcrumb from '../../../../src/layouts/full/shared/breadcrumb/Breadcrum
 import PageContainer from '../../../../src/components/container/PageContainer';
 
 import BlankCard from '../../../../src/components/shared/BlankCard';
-import CustomerListTable from '../../../../src/components/dashboard/customer/ListCustomerTable';
+import MachinesList from '../../../../src/components/dashboard/machines/MyPointTable';
 
 const BCrumb = [
   {
@@ -19,12 +19,12 @@ export default function EcomProductList() {
   return (
     <PageContainer>
       {/* breadcrumb */}
-      <Breadcrumb title="List Customer" items={BCrumb} />
+      <Breadcrumb title="My Point" items={BCrumb} />
       <BlankCard>
         {/* ------------------------------------------- */}
         {/* Left part */}
         {/* ------------------------------------------- */}
-        <CustomerListTable />
+        <MachinesList />
       </BlankCard>
     </PageContainer>
   );

@@ -116,7 +116,7 @@ const Menuitems: MenuitemsType[] = [
     id: uniqueId(),
     title: 'Vending Machines',
     icon: CoffeeMaker,
-    href: '/dashboard/machines/my-point',
+    href: '/dashboard/vending/my-point',
 
   },
   {
